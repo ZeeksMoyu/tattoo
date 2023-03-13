@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { Inter } from '@next/font/google'
+import styles from '@/styles/Home.module.css'
 import Header from 'components/header/header'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Title from "@/components/title/title";
@@ -14,7 +15,7 @@ const darkTheme = createTheme({
     },
 });
 
-export default function Home() {
+export default function Price() {
     return (
         <ThemeProvider theme={darkTheme}>
             <Head>
@@ -26,7 +27,7 @@ export default function Home() {
             <main>
                 <Header/>
                 <Title/>
-                <Main/>
+
                 <Content/>
                 <Footer/>
             </main>

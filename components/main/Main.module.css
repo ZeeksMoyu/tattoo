@@ -1,0 +1,29 @@
+
+
+.modal{
+    background: rgba(0,0,0,0.67);
+}
+
+.closeIcon{
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 516px) {
+    .photoBlock{
+        height: 375px;
+        width: 250px;
+    }
+}
+
+@media (max-width: 378px) {
+    .photoBlock{
+        width: 200px;
+        height: 300px;
+    }
+}

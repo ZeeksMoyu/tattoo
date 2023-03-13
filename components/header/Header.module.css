@@ -1,0 +1,36 @@
+.header{
+    height: 70px;
+    background: rgba(111,111,111,0.1);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+    align-items: center;
+    position: absolute;
+    width: calc(100vw);
+    color: white;
+    z-index: 10;
+}
+
+.header>div{
+    cursor: pointer;
+}
+
+.title{
+    font-size: 20px;
+    text-shadow: 1px 1px 8px #d5d5d5;
+}
+
+.name{
+    font-size: 32px;
+    text-shadow: 1px 1px 10px #d5d5d5;
+}
+
+.menu{
+    margin-left: 35px;
+}
+
+@media (max-width: 400px) {
+    .title{
+        display: none;
+    }
+}

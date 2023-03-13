@@ -1,0 +1,121 @@
+.footer{
+    min-height: 60px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #fff;
+    position: relative;
+}
+
+.footer div{
+    margin: 5px 10px 5px 10px;
+}
+
+.footerContent{
+    min-height: 200px;
+    background: #3b3b3b;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    color: white;
+    padding: 2%;
+    flex-wrap: wrap;
+}
+
+.title{
+    font-size: 24px;
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+
+.footerBlock{
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    text-align: center;
+}
+
+.descr{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.block{
+    display: flex;
+    flex-direction: column;
+}
+
+.blockNews{
+    display: flex;
+    margin: 10px;
+    align-items: center;
+}
+
+.img{
+    width: 64px;
+    height: 64px;
+    background: #000;
+    margin: 0 10px 0 0;
+}
+
+.newsDescr{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lastNews{
+    padding: 0 5px;
+}
+
+.infoNews{
+    padding: 0 5px;
+    font-size: 12px;
+    color: #b7b7b7;
+}
+
+.contactBlocks{
+    display: flex;
+    flex-direction: column;
+}
+
+.blockContact{
+    display: flex;
+    align-items: center;
+}
+
+.blockContact:hover{
+    border-radius: 10px;
+    transition: 0.15s;
+    scale: 0.97;
+    box-shadow: inset 8px 8px 24px 0 rgba(66, 68, 90, 1);
+    color: #000;
+}
+
+.imgContact{
+    height: 32px;
+    width: 32px;
+    margin: 5px 10px;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 1260px) {
+    .footerBlock{
+        max-width: 300px;
+    }
+}

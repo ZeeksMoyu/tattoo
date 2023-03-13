@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css?family=Sofia");
+
+.title{
+    height: calc(100vh);
+    width: calc(100vw);
+    background: linear-gradient(rgba(0,0,0, 0.7), rgba(0, 0, 0, 0.8)),url("/images/tattoo_title.jpg") center;
+    background-size: cover;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 120px;
+    justify-content: center;
+    position: relative;
+
+}
+
+.title>div{
+    font-family: "Courier", sans-serif;
+    color: #fff;
+}
+
+
+@media (max-width: 684px) {
+    .title{
+        font-size: 64px;
+    }
+}
+
+@media (max-width: 420px){
+    .title{
+        background-size: cover;
+
+    }
+}
