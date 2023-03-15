@@ -6,6 +6,13 @@ import Image from 'next/image'
 import Carousel from 'react-material-ui-carousel'
 import { Paper } from '@mui/material'
 import CloseIcon from '@mui/icons-material/Close';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import {Navigation, Pagination, Scrollbar, A11y} from 'swiper'
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
 
 interface Props {
     data: any
@@ -37,15 +44,24 @@ const PhotoBlock: React.FC<Props>= ({data, src,}) => {
                aria-labelledby="modal-modal-title"
                aria-describedby="modal-modal-description"
            >
-               <Box sx={style}>
-                   <Carousel
-                       autoPlay={false}
-                       animation={'slide'}
-                       duration={400}
-                   >
-                       {data.map( (item: any, i: number) => <Item close={handleClose} key={i} item={item} /> )}
-                   </Carousel>
-               </Box>
+               <Swiper
+                   loop={true}
+                   className={classes.swiper}
+                   // install Swiper modules
+                   modules={[Navigation, Pagination, Scrollbar, A11y]}
+                   spaceBetween={50}
+                   slidesPerView={1}
+                   navigation
+                   pagination={{ clickable: true, dynamicBullets: true }}
+               >
+                   {data.map( (item: any, i: number) =>(
+                       <SwiperSlide
+                           key={i}
+                       >
+                           <img className={classes.imgPhotoBlock} alt={'photo'} src={item.src}></img>
+                       </SwiperSlide>
+                   ) )}
+               </Swiper>
            </Modal>
        </>
     );
