@@ -1,10 +1,6 @@
 import React, {useState} from 'react';
 import classes from "./Main.module.css"
-import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
-import Image from 'next/image'
-import Carousel from 'react-material-ui-carousel'
-import { Paper } from '@mui/material'
 import CloseIcon from '@mui/icons-material/Close';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -57,8 +53,10 @@ const PhotoBlock: React.FC<Props>= ({data, src,}) => {
                    {data.map( (item: any, i: number) =>(
                        <SwiperSlide
                            key={i}
+                           className={classes.swiperSlider}
                        >
                            <img className={classes.imgPhotoBlock} alt={'photo'} src={item.src}></img>
+                           <CloseIcon onClick={handleClose} className={classes.closeIcon} sx={{ fontSize: 50 }} />
                        </SwiperSlide>
                    ) )}
                </Swiper>
@@ -66,19 +64,4 @@ const PhotoBlock: React.FC<Props>= ({data, src,}) => {
        </>
     );
 };
-
-function Item(props: any)
-{
-    return (
-        <>
-            <div className={classes.closeIcon}>
-                <CloseIcon onClick={props.close} fontSize="large" />
-            </div>
-            <Paper>
-                <Image alt={'photo'} src={props.item.src} width={400} height={600}/>
-            </Paper>
-        </>
-    )
-}
-
 export default PhotoBlock;
