@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import classes from "./Main.module.css"
 import Modal from '@mui/material/Modal';
-import CloseIcon from '@mui/icons-material/Close';
+import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import {Navigation, Pagination, Scrollbar, A11y, Zoom} from 'swiper'
@@ -54,7 +54,7 @@ const PhotoBlock: React.FC<Props>= ({data, src,}) => {
                            </div>
                        </SwiperSlide>
                    ) )}
-                   <CloseIcon onClick={handleClose} className={classes.closeIcon} sx={{ fontSize: 50 }} />
+                   <CloseOutlinedIcon onClick={handleClose} className={classes.closeIcon} sx={{ fontSize: 50 }} />
                </Swiper>
            </Modal>
        </>

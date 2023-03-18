@@ -78,6 +78,10 @@ ul{
   top: 30px!important;
 }
 
+.swiper-wrapper{
+  align-items: center;
+}
+
 .article{
   min-height: calc(100vh);
   background: linear-gradient(180deg, rgba(14,11,12,1) 0%, rgba(25,24,21,1) 100%);
@@ -120,6 +124,21 @@ ul{
 @media screen and (max-height: 700px) {
   .css-11nzuoc{
     height: 100%;
+  }
+}
+
+
+@media (max-width: 516px){
+  .photoBlock{
+    height: 400px;
+    width: 266px;
+  }
+}
+
+@media screen and (max-width: 364px ){
+  .photoBlock{
+    height: 300px;
+    width: 200px;
   }
 }
 
