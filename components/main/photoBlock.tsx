@@ -4,10 +4,11 @@ import Modal from '@mui/material/Modal';
 import CloseIcon from '@mui/icons-material/Close';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import {Navigation, Pagination, Scrollbar, A11y} from 'swiper'
+import {Navigation, Pagination, Scrollbar, A11y, Zoom} from 'swiper'
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import "swiper/css/zoom";
 
 
 interface Props {
@@ -15,14 +16,6 @@ interface Props {
     src: string
 }
 
-const style = {
-    position: 'absolute' as 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 400,
-    p: 0,
-};
 
 const PhotoBlock: React.FC<Props>= ({data, src,}) => {
 
@@ -41,10 +34,11 @@ const PhotoBlock: React.FC<Props>= ({data, src,}) => {
                aria-describedby="modal-modal-description"
            >
                <Swiper
+                   zoom={true}
                    loop={true}
                    className={classes.swiper}
                    // install Swiper modules
-                   modules={[Navigation, Pagination, Scrollbar, A11y]}
+                   modules={[Navigation, Pagination, Scrollbar, A11y, Zoom]}
                    spaceBetween={50}
                    slidesPerView={1}
                    navigation
@@ -55,10 +49,12 @@ const PhotoBlock: React.FC<Props>= ({data, src,}) => {
                            key={i}
                            className={classes.swiperSlider}
                        >
-                           <img className={classes.imgPhotoBlock} alt={'photo'} src={item.src}></img>
-                           <CloseIcon onClick={handleClose} className={classes.closeIcon} sx={{ fontSize: 50 }} />
+                           <div className="swiper-zoom-container">
+                               <img className={classes.imgPhotoBlock} alt={'photo'} src={item.src}></img>
+                           </div>
                        </SwiperSlide>
                    ) )}
+                   <CloseIcon onClick={handleClose} className={classes.closeIcon} sx={{ fontSize: 50 }} />
                </Swiper>
            </Modal>
        </>
